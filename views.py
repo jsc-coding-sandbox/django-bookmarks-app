@@ -1,7 +1,10 @@
 from django.shortcuts import render
+from django.views.generic.base import TemplateView
 
-def index(request):
+
+class LoginView(TemplateView):
     """
-    TODO: Implement this!
+    Ask the user to either log in or create an account.
     """
-    pass
+    template_name = "bookmarks/login.html"
+    context = {}

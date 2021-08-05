@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Log in or create an account</title>
+    <!-- Remember to link stylesheet here with template code -->
+  </head>
+
+  <body>
+    <main>
+      <header><h1>Log in or create a new account</header>
+      <form id="login-form">
+        <label for="username">Username:</label>
+        <input id="username" type="text" placeholder="Enter your username" required>
+
+        <label for="password">Password:</label>
+        <input id="password" type="password" placeholder="Enter your password" required>
+
+        <div id="form-buttons">
+          <input id="login" type="submit" value="Log In" formmethod="post">{% csrf_token %}
+          <input id="signup" type="button" value="Sign Up">
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
