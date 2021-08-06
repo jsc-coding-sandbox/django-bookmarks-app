@@ -2,22 +2,29 @@
 <html>
   <head>
     <title>Log in or create an account</title>
-    <!-- Remember to link stylesheet here with template code -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bookmarks/login.css' %}">
   </head>
 
   <body>
     <main>
       <header><h1>Log in or create a new account</header>
       <form id="login-form">
-        <label for="username">Username:</label>
-        <input id="username" type="text" placeholder="Enter your username" required>
+        <div class="form-row">
+          <label for="username">Username:</label>
+          <input id="username" type="text" placeholder="Enter your username" required>
+        </div>
 
-        <label for="password">Password:</label>
-        <input id="password" type="password" placeholder="Enter your password" required>
+        <div class="form-row">
+          <label for="password">Password:</label>
+          <input id="password" type="password" placeholder="Enter your password" required>
+        </div>
 
-        <div id="form-buttons">
-          <input id="login" type="submit" value="Log In" formmethod="post">{% csrf_token %}
-          <input id="signup" type="button" value="Sign Up" onclick="alert('Not yet implemented.')">
+        <div class="form-row">
+          <div id="form-buttons">
+            <input id="login" type="submit" value="Log In" formmethod="post">{% csrf_token %}
+            <input id="signup" type="button" value="Sign Up" onclick="alert('Not yet implemented.')">
+          </div>
         </div>
       </form>
     </main>
